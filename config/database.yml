@@ -23,6 +23,7 @@ default: &default
 
 development:
   <<: *default
+  adapter: sqlite3
   database: sample_app_f_development
 
   # The specified database role being used to connect to postgres.
