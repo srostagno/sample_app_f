@@ -79,7 +79,10 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
   database: sample_app_f_production
+  pool: 5
+  host: localhost
   username: sample_app_f
   password: <%= ENV['SAMPLE_APP_F_DATABASE_PASSWORD'] %>
